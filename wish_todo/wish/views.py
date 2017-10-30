@@ -3,4 +3,8 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-# Create your views here.
+
+def wish_detail(request):
+#def wish_delete(request):
+#def wish_edit(request):
+#def wish_list(request):
