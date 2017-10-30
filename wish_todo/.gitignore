@@ -2,3 +2,4 @@
 *.swp
 htmlcov/
 db.sqlite3
+*.jpeg

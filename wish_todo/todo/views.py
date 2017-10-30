@@ -4,11 +4,11 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def item_detail(request):
+def item_detail(request, pk):
     return HttpResponse("Todolist item details")
-def item_delete(request):
+def item_delete(request, pk):
     return HttpResponse("Todolist item delete view")
-def item_edit(request):
+def item_edit(request, pk):
     return HttpResponse("todolist item edit view")
 def item_list(request):
     return HttpResponse("todolist item list view")
