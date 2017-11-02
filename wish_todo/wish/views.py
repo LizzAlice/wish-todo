@@ -16,10 +16,9 @@ def wish_edit(request, pk):
     return HttpResponse('Edit-view for wishes')
 def wish_list(request):
     wish_set = Wish.objects.order_by('priority')
-    template = loader.get_template('wish/list.html')
     context = {
         'wish_set' : wish_set
     }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'wish/list.html', context)
 def wish_add(request):
     return HttpResponse("wish add view")
