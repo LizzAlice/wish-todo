@@ -1,0 +1,9 @@
+<h1> {{wish.title}} </h1>
+
+<ul>
+  {% for name, value in wish.get_information %}
+    {% if value %}
+    <li> {{name}} : {{value}} </li>
+    {% endif %}
+  {% endfor %}
+</ul>

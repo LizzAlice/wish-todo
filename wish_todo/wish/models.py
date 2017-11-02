@@ -25,3 +25,6 @@ class Wish(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_information(self):
+        return [(field.name, field.value_to_string(self)) for field in Wish._meta.fields]

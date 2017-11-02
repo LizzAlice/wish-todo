@@ -25,5 +25,9 @@ class TodoItem(models.Model):
 
     class Meta:
         verbose_name = 'Todo Item'
+
     def __str__(self):
         return self.title
+
+    def get_information(self):
+        return [(field.name, field.value_to_string(self)) for field in TodoItem._meta.fields]

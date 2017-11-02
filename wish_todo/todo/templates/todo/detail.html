@@ -1,0 +1,9 @@
+<h1> {{todo.title}} </h1>
+
+<ul>
+  {% for name, value in todo.get_information %}
+    {% if value %}
+    <li> {{name}} : {{value}} </li>
+    {% endif %}
+  {% endfor %}
+</ul>
