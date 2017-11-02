@@ -3,6 +3,9 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 def index(request):
-    return HttpResponse("Hier wird mal eine Übersicht stehen! :)")
+    template = loader.get_template('overview/index.html')
+    context = {}
+    return HttpResponse(template.render(context, request))

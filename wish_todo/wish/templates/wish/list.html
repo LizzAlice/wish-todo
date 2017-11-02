@@ -1,0 +1,10 @@
+{% if wish_set %}
+  <ul>
+    {% for wish in wish_set %}
+      <li><a href = "/wish/{{wish.id}}/">{{wish.title}}</a></li>
+    {% endfor %}
+  </ul>
+
+{% else %}
+  <p>You are perfectly happy</p>
+{% endif %}

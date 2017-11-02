@@ -1,0 +1,9 @@
+{% if item_set %}
+  <ul>
+    {% for item in item_set %}
+      <li><a href = '/todo/{{item.id}}/'>{{item.title}}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Nice, free time!! :)</p>
+{% endif %}

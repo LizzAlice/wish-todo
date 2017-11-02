@@ -3,6 +3,9 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
+
+from .models import Wish
 
 
 def wish_detail(request, pk):
@@ -12,7 +15,11 @@ def wish_delete(request, pk):
 def wish_edit(request, pk):
     return HttpResponse('Edit-view for wishes')
 def wish_list(request):
-    wish_set = Wish.objects.order_by()
-    return HttpResponse('list of all wishes; can be filtered')
+    wish_set = Wish.objects.order_by('priority')
+    template = loader.get_template('wish/list.html')
+    context = {
+        'wish_set' : wish_set
+    }
+    return HttpResponse(template.render(context, request))
 def wish_add(request):
     return HttpResponse("wish add view")
