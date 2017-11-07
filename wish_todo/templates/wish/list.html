@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content%}
+  {% if wish_set %}
+    <ul>
+      {% for wish in wish_set %}
+        <li><a href = '{% url 'wish:detail' wish.id %}'>{{wish.title}}</a></li>
+      {% endfor %}
+    </ul>
+
+  {% else %}
+    <p>You are perfectly happy</p>
+  {% endif %}
+
+{% endblock %}

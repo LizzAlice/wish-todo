@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 {% if item_set %}
   <ul>
     {% for item in item_set %}
@@ -7,3 +10,5 @@
 {% else %}
   <p>Nice, free time!! :)</p>
 {% endif %}
+
+{% endblock %}

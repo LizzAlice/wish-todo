@@ -57,7 +57,7 @@ ROOT_URLCONF = 'wish_todo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['{0}/templates'.format(os.getcwd()),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
